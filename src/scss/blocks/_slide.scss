@@ -1,0 +1,202 @@
+:root{
+    --radial-bg: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.2) 100%
+        );
+
+    --linear-bg: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.2) 0%,
+		rgba(255, 255, 255, 0) 99.99%,
+		rgba(255, 255, 255, 0) 100%
+	);
+
+}
+
+.slide {
+    height: 100vh;
+    overflow: hidden;
+    padding-bottom: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #555;
+
+    
+    &--norway{
+        background: var(--radial-bg), var(--linear-bg),
+        url('./../img/slider-bg/01.jpg');
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    &--austria{
+        background: var(--radial-bg), var(--linear-bg),
+        url('./../img/slider-bg/02.jpg');
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+   }
+    &--uae{
+        background: var(--radial-bg), var(--linear-bg),
+        url('./../img/slider-bg/03.jpg');
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+    &--thailand{
+        background: var(--radial-bg), var(--linear-bg),
+        url('./../img/slider-bg/04.jpg');
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+   }
+   &--morocco{
+        background: var(--radial-bg), var(--linear-bg),
+        url('./../img/slider-bg/05.jpg');
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    color: #fff;
+
+
+    &::before{
+        content: '';
+    }
+
+    cursor: grab;
+    &:active{
+        cursor: grabbing;
+    }
+
+    @media (max-width: 1200px){
+        padding-bottom: 60px;
+    }
+
+    @media (max-width: 767px){
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+}
+
+.slide__headder {
+    position: relative;
+    text-align: center;
+}
+
+.slide__tagline {
+    position: absolute;
+    width: 100%;
+    top: -8px;
+    font-weight: 500;
+    font-size: 1.56vw;
+    line-height: 1.23;
+    letter-spacing: 0.55em;
+    color: rgba(255, 255, 255, 0.7);
+
+    @media(max-width: 767px){
+        font-size: 3vw;
+    }
+}
+
+
+@mixin background($color){
+    background: linear-gradient(
+        47.06deg,
+        $color -3.87%,
+        rgba(255, 255, 255, 0) 20.89%
+        ),
+        #ffffff;
+        
+}
+
+.slide__title {
+    display: inline-block; 
+    padding: 0 10px;
+
+    padding: 0 10px;
+    font-size: 13vw; 
+    font-weight: 700;
+    line-height: 1.22;
+
+    @media (max-width: 767px){
+        font-size: 19vw;
+    }
+
+
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+
+        &--norwey {
+            @include background(#051d27);
+        
+            }
+        &--austria {
+            @include background(#122127);
+        
+            }
+        &--uae {
+            @include background(#aa6621);
+        
+            }
+        &--thailand {
+            @include background(#2e7c88);
+        
+            }
+        &--morocco {
+            @include background(#757575);
+        
+            }
+
+}
+
+
+.slide__locations {
+    display: flex;
+    column-gap: 30px;
+    width: 70%;
+    margin: 0 auto;
+    @media(max-width: 1023px){
+        width: 90%;
+    }
+
+    @media(max-width: 767px){
+        width: 90%;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+
+.slide__start{
+    font-size: 2vw;
+    position: relative;
+
+    
+    &::before{content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(0, 0, 0);
+        bottom: -4px;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+    &:hover::before{
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+
+    @media (max-width: 767px){
+        font-size: 4vw;
+    }
+
+
+}

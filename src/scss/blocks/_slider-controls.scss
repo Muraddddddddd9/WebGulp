@@ -1,0 +1,28 @@
+.slider-controls {
+    display: grid;
+    gap: 15px;
+}
+.slider-controls__arrows {
+    display: flex;
+    column-gap: 5px;
+    opacity: 0.3;
+}
+.slider-controls__count {
+    // padding-left: 16px;
+    display: flex;
+    column-gap: 6px;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    color: rgba(255,255,255,0.3) !important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: right;
+}
+
+.slider-controls__count-current, .swiper-pagination-current {
+    font-size: 32px;
+    line-height: 0.75;
+    color: #fff;
+}
